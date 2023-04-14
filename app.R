@@ -1,3 +1,5 @@
+# Crash Severity Prediction -  Asif Irfanullah Masum & Ifrat Zaman
+
 # Load libraries
 library("shiny")
 
