@@ -1,7 +1,6 @@
 # Load libraries so they are available
 library("shiny")
 
-
 intro_panel <- tabPanel(
   title = "Introduction",
   titlePanel(
@@ -50,12 +49,6 @@ model_evaluation_panel <- tabPanel(
 conclusion_panel <- tabPanel(
   title = "Conclusion",
   titlePanel("Conclusion"),
-)
-  
-sidebar_content <- sidebarPanel(
-  #sliderInput("percentile", "Income Percentile",
-  #            min = 0, max = 100, value = 0
-  #)
 )
 
 ui <- navbarPage(
