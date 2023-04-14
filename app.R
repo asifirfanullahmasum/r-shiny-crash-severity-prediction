@@ -1,5 +1,3 @@
-# CS5610 Ex6
-
 # Load libraries
 library("shiny")
 
