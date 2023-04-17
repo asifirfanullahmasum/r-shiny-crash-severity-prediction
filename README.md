@@ -1,18 +1,16 @@
-# r-shiny-crash-severity-prediction
-
 # R-Shiny App for Crash Severity Prediction
 This repository contains an R-Shiny App that you can run on your local system.
 
 ## Installation
 To install the R-Shiny App, please follow these steps:
 1. Clone the repository to your local system using git clone:
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/asifirfanullahmasum/r-shiny-crash-severity-prediction.git
 
 2. Open the app.R file in R Studio.
 
 3. Click on "Run App" or select all the code using Ctrl + A and then press Ctrl + Shift + Enter.
 
-Your app should now be running locally at http://127.0.0.1:port-number/ in your web browser.
+Your app should now be running locally in your web browser.
 
 ## Usage
 Once the app is running, you can interact with it in your web browser.
