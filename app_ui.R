@@ -81,7 +81,8 @@ exploration_panel <- tabPanel(
     )
   ),
   uiOutput("selectVariable"),
-  plotOutput("plot")
+  plotOutput("plot"),
+  actionButton("injuryButton", "Show injured data only")
 )
 
 model_evaluation_panel <- tabPanel(title = "Model Evaluation",

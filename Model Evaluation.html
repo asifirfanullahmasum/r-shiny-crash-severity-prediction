@@ -1611,7 +1611,6 @@ display: none;
 
 <body>
 
-
 <div class="container-fluid main-container">
 
 <div id="spliting-data-for-training-set-and-testing-set-for-natural-factor-subset" class="section level2">
@@ -1646,7 +1645,32 @@ predictions1 &lt;- predict(logRegModel1, nfcTestData)
 # Check the metrics of the model
 cat(&quot;Model Accuracy for Human Factor Subset&quot;, mean(predictions1 == nfcTestData$injy_svty_cd), &quot;\n&quot;)</code></pre>
 <pre><code>## Model Accuracy for Human Factor Subset 0.874325</code></pre>
+
+<pre class="r"><code>cat(&quot;Summary of Model for Natural Factor Subset \n&quot;)</code></pre>
+<pre><code>## Summary of Model for Natural Factor Subset</code></pre>
+<pre class="r"><code>summary(logRegModel1)</code></pre>
+<pre><code>## Call:
+## multinom(formula = injy_svty_cd ~ ., data = nfcTrainData)
+## 
+## Coefficients:
+##   (Intercept)    wthr_cd      lit_cd rd_cond_cd mdot_regn_cd
+## 2   0.7701842 0.01190512 -0.08226344  0.2688751  -0.08165386
+## 3   0.7318886 0.12198706 -0.05773074  0.3036389  -0.07591254
+## 4   0.5054720 0.18281182 -0.04744517  0.4009395  -0.07205555
+## 5   0.8371130 0.25291284  0.01792041  0.4691929  -0.17222438
+## 
+## Std. Errors:
+##   (Intercept)    wthr_cd     lit_cd rd_cond_cd mdot_regn_cd
+## 2   0.4698649 0.06083205 0.07287098 0.08166274   0.06708661
+## 3   0.4449238 0.05639866 0.06832235 0.07832720   0.06320378
+## 4   0.4352315 0.05492283 0.06653883 0.07674474   0.06166690
+## 5   0.4233542 0.05369919 0.06481516 0.07573061   0.06002194
+## 
+## Residual Deviance: 6088.143 
+## AIC: 6128.143</code></pre>
 </div>
+
+
 <div id="spliting-data-for-training-set-and-testing-set-for-human-factor-subset" class="section level2">
 <h2>Spliting Data for Training set and Testing set for Human Factor
 Subset</h2>
@@ -1680,9 +1704,40 @@ predictions2 &lt;- predict(logRegModel2, hfcTestData)
 # Check the accuracy of the model
 cat(&quot;Model Accuracy for Human Factor Subset&quot;, mean(predictions2 == hfcTestData$injy_svty_cd), &quot;\n&quot;)</code></pre>
 <pre><code>## Model Accuracy for Human Factor Subset 0.8745039</code></pre>
+
+<pre class="r"><code>cat(&quot;Summary of Model for Human Factor Subset \n&quot;)</code></pre>
+<pre><code>## Summary of Model for Human Factor Subset</code></pre>
+<pre class="r"><code>summary(logRegModel2)</code></pre>
+<pre><code>## Call:
+## multinom(formula = injy_svty_cd ~ ., data = hfcTrainData)
+## 
+## Coefficients:
+##   (Intercept) vehc_dfct_cd rstr_not_used_fail hzrd_actn_cd alch_susp_ind
+## 2    1.874069   -0.3092738         0.06731287  0.015048554    0.02711268
+## 3    2.764393   -0.3907023        -0.32221528 -0.005905567    0.32200762
+## 4    3.495816   -0.5509746        -0.52900477  0.021572451    0.04279886
+## 5    4.619684   -0.6739121        -0.53392915 -0.007016898    0.27391087
+##   drug_susp_ind
+## 2    -0.1803684
+## 3    -0.4299473
+## 4    -0.1446772
+## 5    -0.2226340
+## 
+## Std. Errors:
+##   (Intercept) vehc_dfct_cd rstr_not_used_fail hzrd_actn_cd alch_susp_ind
+## 2    1.220805    0.2161190          0.3585178   0.03162785     0.3709245
+## 3    1.167515    0.2070905          0.3537656   0.03063838     0.3589850
+## 4    1.135720    0.2014991          0.3607902   0.03074554     0.3657676
+## 5    1.109826    0.1972081          0.3434313   0.02920770     0.3471326
+##   drug_susp_ind
+## 2     0.3836188
+## 3     0.3813904
+## 4     0.3767165
+## 5     0.3622203
+## 
+## Residual Deviance: 1328.654 
+## AIC: 1376.654</code></pre>
 </div>
-
-
 
 
 </div>
